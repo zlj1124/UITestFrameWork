@@ -11,7 +11,7 @@ class SendMailWithReport(object):
         # 初始化服务器等信息
         yag = yagmail.SMTP(from_user, from_pass_word, smtp_server)
         # 发送邮件
-        yag.send(to =to_user, subject = subject, contents=[file_name,'/Users/test/work/UITest/util/1.png'])
+        yag.send(to =to_user, subject = subject, contents=[file_name,])
 
 
 

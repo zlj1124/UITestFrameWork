@@ -35,4 +35,5 @@ class ParseConFile(object):
 
 
 if __name__ == '__main__':
-    pass
+    parse=ParseConFile()
+    print( parse.get_option_value('LoginPageElements'))

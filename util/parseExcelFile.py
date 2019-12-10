@@ -68,4 +68,11 @@ class ParseExcel(object):
 
 
 if __name__ == '__main__':
-    pass
+    exe=ParseExcel()
+    sheet=exe.get_sheet_by_name('login')
+    print(exe.get_all_values_of_sheet(sheet))
+    print(exe.get_all_values_of_sheet(sheet)[0])
+    
+
+
+
