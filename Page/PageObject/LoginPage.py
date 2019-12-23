@@ -1,7 +1,7 @@
 import time
 from Page.BasePage import BasePage
 from util.parseConFile import ParseConFile
-
+from config.conf import URL
 
 class LoginPage(BasePage):
     # 配置文件读取元素
@@ -27,7 +27,7 @@ class LoginPage(BasePage):
         
 
     def open_url(self):
-        return self.load_url('http://47.110.188.32:80/login')
+        return self.load_url(URL)
 
    
 

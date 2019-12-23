@@ -39,7 +39,8 @@ def pytest_html_results_table_header(cells):
     cells.insert(1, html.th('Description'))
     cells.insert(2, html.th('Test_nodeid'))
     cells.pop(2)
-    cells.pop()  
+    cells.pop()
+    
 
 
 @pytest.mark.optionalhook
@@ -47,7 +48,7 @@ def pytest_html_results_table_row(report, cells):
     cells.insert(1, html.td(report.description))
     cells.insert(2, html.td(report.nodeid))
     cells.pop(2)
-    cells.pop()  
+    cells.pop()
 
 
 def _capture_screenshot():
@@ -64,13 +65,12 @@ def driver():
     driverpath = os.path.abspath("../UITestFrameWork/drivers/chromedriver")
     global _driver
     print('------------open browser------------')
-    # headless mode
-#     option = webdriver.ChromeOptions()
-#     option.set_headless()
-#     option.add_argument("window-size=1920,1080")
-#     _driver = webdriver.Chrome(executable_path=driverpath,options=option)
-
-    _driver = webdriver.Chrome(executable_path=driverpath)
+#     headless mode
+    option = webdriver.ChromeOptions()
+    option.headless=True
+    option.add_argument("window-size=1920,1080")
+    _driver = webdriver.Chrome(executable_path=driverpath,options=option)
+#     _driver = webdriver.Chrome(executable_path=driverpath)
     _driver.maximize_window()
     yield _driver
     print('------------close browser------------')

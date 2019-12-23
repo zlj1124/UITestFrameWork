@@ -1,10 +1,10 @@
 
 import pytest
-
+from util.db import DbConnect
 from data.worker_data import ProfileData
+local_db = DbConnect('jing5DB')
 
 
-# @pytest.mark.conatctTest
 class TestAddworker(object):
     """添加业务员"""
     worker_data = ProfileData
@@ -17,7 +17,7 @@ class TestAddworker(object):
     @pytest.mark.parametrize('name,phone,department, expect', add_success_data)
     def test_a_add_success(self, login, refresh_page, name,phone, department, expect):
         """验证添加业务员"""
-       
+        
         home_page = login[1]
         profile_page = login[2]
         print("login[1]:{},login[2]:{}".format(login[1],login[2]))
@@ -65,7 +65,12 @@ class TestAddworker(object):
         print("expect:{},actual:{}".format(expect,actual))
         assert actual == expect, "删除成功, 断言失败"
 
+    # def teardown_class(self):
+    #     '''通过数据库保持数据一致性'''
+    #     local_db.delete_sql("owl_profile",'name','linux1')
+    #     local_db.close_conn()
         
+
 
 
 if __name__ == '__main__':

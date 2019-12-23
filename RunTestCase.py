@@ -10,6 +10,7 @@ FROM_PASSWORD,TO_USER,SUBJECT,CONTENTS,HTML_NAME
 def main():
     if ROOT_DIR not in sys.path:
         sys.path.append(ROOT_DIR)
+    print(ROOT_DIR)    
     # 执行用例 --reruns n 重复执行次数
     args = ['--reruns', '0', '--html=' + './report/' + HTML_NAME]
     pytest.main(args)
