@@ -1,0 +1,121 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Lettos-iMac.local",
+    "children" : [ {
+      "name" : "15177-MainThread",
+      "children" : [ {
+        "name" : "test_fail[-10086-请输入账号]",
+        "uid" : "e038e18b722e5a1c",
+        "parentUid" : "3ed87c1decf61cea3c737a01223cccd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584410020710,
+          "stop" : 1584410024492,
+          "duration" : 3782
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入账号'", "'10086'", "''" ]
+      }, {
+        "name" : "test_fail[10086--请输入密码]",
+        "uid" : "a719c544ca2a952b",
+        "parentUid" : "3ed87c1decf61cea3c737a01223cccd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584410015918,
+          "stop" : 1584410020700,
+          "duration" : 4782
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入密码'", "''", "'10086'" ]
+      }, {
+        "name" : "test_fail[10010-10010-图形验证码校验失败]",
+        "uid" : "2e7f5c98133839cb",
+        "parentUid" : "3ed87c1decf61cea3c737a01223cccd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584410024501,
+          "stop" : 1584410028231,
+          "duration" : 3730
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'图形验证码校验失败'", "'10010'", "'10010'" ]
+      }, {
+        "name" : "test_login[10086-10086-登录成功]",
+        "uid" : "98b3d7c8a15dc22d",
+        "parentUid" : "3ed87c1decf61cea3c737a01223cccd4",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1584410014534,
+          "stop" : 1584410014534,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'登录成功'", "'10086'", "'10086'" ]
+      } ],
+      "uid" : "3ed87c1decf61cea3c737a01223cccd4"
+    }, {
+      "name" : "13845-MainThread",
+      "children" : [ {
+        "name" : "test_fail[-10086-请输入账号]",
+        "uid" : "f0f155f7a3c940e1",
+        "parentUid" : "5421cd3e4b0d8622be8cbaeb87eef929",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584409621578,
+          "stop" : 1584409625195,
+          "duration" : 3617
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入账号'", "'10086'", "''" ]
+      }, {
+        "name" : "test_fail[10010-10010-图形验证码校验失败]",
+        "uid" : "e8230f3685f882f",
+        "parentUid" : "5421cd3e4b0d8622be8cbaeb87eef929",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584409625204,
+          "stop" : 1584409628813,
+          "duration" : 3609
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'图形验证码校验失败'", "'10010'", "'10010'" ]
+      }, {
+        "name" : "test_fail[10086--请输入密码]",
+        "uid" : "69dfa9ab05e1dede",
+        "parentUid" : "5421cd3e4b0d8622be8cbaeb87eef929",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584409617377,
+          "stop" : 1584409621571,
+          "duration" : 4194
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'请输入密码'", "''", "'10086'" ]
+      }, {
+        "name" : "test_login[10086-10086-登录成功]",
+        "uid" : "5730435b41e0357d",
+        "parentUid" : "5421cd3e4b0d8622be8cbaeb87eef929",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1584409616054,
+          "stop" : 1584409616054,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'登录成功'", "'10086'", "'10086'" ]
+      } ],
+      "uid" : "5421cd3e4b0d8622be8cbaeb87eef929"
+    } ],
+    "uid" : "844289fd9829137984195e4aecf6823c"
+  } ]
+}

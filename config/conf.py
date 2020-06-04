@@ -12,6 +12,8 @@ CONF_PATH = os.path.join(ROOT_DIR, 'config', 'config.ini')
 DB_PATH = os.path.join(ROOT_DIR,'config','db.ini')
 # 测试数据所在目录
 DATA_Path = os.path.join(ROOT_DIR, 'data', 'tcData.xlsx')
+DATA_JsonPath = os.path.join(ROOT_DIR, 'data', 'data.json')
+
 # 当前时间
 CURRENT_TIME = datetime.now().strftime('%H_%M_%S')
 

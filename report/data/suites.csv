@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Mar 17 09:53:40 CST 2020","Tue Mar 17 09:53:44 CST 2020","3782","TestCases","test_loginCase","TestLogin","","","test_fail[-10086-请输入账号]",""
+"passed","Tue Mar 17 09:53:35 CST 2020","Tue Mar 17 09:53:40 CST 2020","4782","TestCases","test_loginCase","TestLogin","","","test_fail[10086--请输入密码]",""
+"skipped","Tue Mar 17 09:53:34 CST 2020","Tue Mar 17 09:53:34 CST 2020","0","TestCases","test_loginCase","TestLogin","","","test_login[10086-10086-登录成功]",""
+"passed","Tue Mar 17 09:53:44 CST 2020","Tue Mar 17 09:53:48 CST 2020","3730","TestCases","test_loginCase","TestLogin","","","test_fail[10010-10010-图形验证码校验失败]",""

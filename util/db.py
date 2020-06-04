@@ -42,7 +42,9 @@ class DbConnect(object):
                
     def select_sql(self, *args):
         try:
-            sql = "SELECT %s, %s, %s FROM %s WHERE %s='%s' ORDER BY %s DESC LIMIT 1;" %(args)
+            # sql = "SELECT %s, %s, %s FROM %s WHERE %s='%s' ORDER BY %s DESC LIMIT 1;" %(args)
+            sql = "SELECT %s, %s, %s FROM %s ORDER BY %s DESC LIMIT 1;" %(args)
+
             self.cursor.execute(sql)
             self.connection.commit()
             result = self.cursor.fetchall()

@@ -1,10 +1,7 @@
 # UITestFrameWork
     Pytest_UI框架
     说明：
-        1.本项目测试地址为:
-        http://47.110.188.32:80/
-      
-        
+
     环境需求：
         2.需安装python 3.以上版本
         3.selenium 2 以上版本
@@ -19,6 +16,10 @@
         2.打开cmd切换到项目根目录
         3.输入python RunTestCase.py运行项目
         4.或者直接通过pytest --html=’report.html‘ 运行(这种方式不会自动发送测试邮件)
+        5.生成allure报告
+            1. py.test TestCases/test_loginCase.py  --alluredir ./result/
+            2.allure generate ./result/ -o ./report/ --clean 
+            
       
 
     

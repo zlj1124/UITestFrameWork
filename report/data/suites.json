@@ -1,0 +1,69 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestCases",
+    "children" : [ {
+      "name" : "test_loginCase",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "test_login[10086-10086-登录成功]",
+          "uid" : "98b3d7c8a15dc22d",
+          "parentUid" : "436b64a9b2a40afddee11d521fb3d065",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1584410014534,
+            "stop" : 1584410014534,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'登录成功'", "'10086'", "'10086'" ]
+        }, {
+          "name" : "test_fail[10086--请输入密码]",
+          "uid" : "a719c544ca2a952b",
+          "parentUid" : "436b64a9b2a40afddee11d521fb3d065",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584410015918,
+            "stop" : 1584410020700,
+            "duration" : 4782
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'请输入密码'", "''", "'10086'" ]
+        }, {
+          "name" : "test_fail[-10086-请输入账号]",
+          "uid" : "e038e18b722e5a1c",
+          "parentUid" : "436b64a9b2a40afddee11d521fb3d065",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584410020710,
+            "stop" : 1584410024492,
+            "duration" : 3782
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'请输入账号'", "'10086'", "''" ]
+        }, {
+          "name" : "test_fail[10010-10010-图形验证码校验失败]",
+          "uid" : "2e7f5c98133839cb",
+          "parentUid" : "436b64a9b2a40afddee11d521fb3d065",
+          "status" : "passed",
+          "time" : {
+            "start" : 1584410024501,
+            "stop" : 1584410028231,
+            "duration" : 3730
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'图形验证码校验失败'", "'10010'", "'10010'" ]
+        } ],
+        "uid" : "436b64a9b2a40afddee11d521fb3d065"
+      } ],
+      "uid" : "9858be516d2b8f2c794868feecd7432b"
+    } ],
+    "uid" : "0408d924bc3d43de55080f45620fd22e"
+  } ]
+}

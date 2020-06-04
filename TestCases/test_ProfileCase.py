@@ -1,7 +1,13 @@
+'''
+@Descripttion: 
+@Author: zlj
+@Date: 2019-12-05 11:05:13
+'''
 
 import pytest
-from util.db import DbConnect
 from data.worker_data import ProfileData
+from util.db import DbConnect
+
 local_db = DbConnect('jing5DB')
 
 
@@ -66,7 +72,7 @@ class TestAddworker(object):
         assert actual == expect, "删除成功, 断言失败"
 
     # def teardown_class(self):
-    #     '''通过数据库保持数据一致性'''
+    #     '''保持数据一致性'''
     #     local_db.delete_sql("owl_profile",'name','linux1')
     #     local_db.close_conn()
         

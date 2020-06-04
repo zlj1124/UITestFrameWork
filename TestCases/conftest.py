@@ -1,3 +1,8 @@
+'''
+@Descripttion: 
+@Author: zlj
+@Date: 2019-12-05 11:05:13
+'''
 
 import pytest
 from Page.PageObject.LoginPage import LoginPage
@@ -27,7 +32,7 @@ def ini_pages(driver):
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
     profile_page = ProfilePage(driver)
-    # 实例化pageobject
+    # yield生成器实例化pageobject
     yield driver, login_page, home_page, profile_page
 
 
@@ -35,7 +40,6 @@ def ini_pages(driver):
 def open_url(ini_pages):
     driver = ini_pages[0]
     login_page = ini_pages[1]
-    # login_page.open_url()
     yield login_page
     driver.delete_all_cookies()
 
@@ -43,7 +47,6 @@ def open_url(ini_pages):
 @pytest.fixture(scope='class')
 def login(ini_pages):
     driver, login_page, home_page,profile_page = ini_pages
-    # login_page.open_url()
     login_page.login(userName, passWord)
     yield login_page, home_page, profile_page 
     driver.delete_all_cookies()

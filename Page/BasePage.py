@@ -36,10 +36,7 @@ class BasePage(object):
 
     def find_element(self, by, locator):
         """
-        find alone element
-        :param by: eg: id, name, xpath, css.....
-        :param locator: id, name, xpath for str
-        :return: element object
+        查找单个元素
         """
         try:
             print('[Info:Starting find the element "{}" by "{}"!]'.format(locator, by))
@@ -51,10 +48,7 @@ class BasePage(object):
 
     def find_elements(self, by, locator):
         """
-        find group elements
-        :param by: eg: id, name, xpath, css.....
-        :param locator: eg: id, name, xpath for str
-        :return: elements object
+        查找一组元素
         """
         try:
             print('[Info:start find the elements "{}" by "{}"!]'.format(locator, by))
@@ -66,10 +60,7 @@ class BasePage(object):
 
     def is_element_exist(self, by, locator):
         """
-        assert element if exist
-        :param by: eg: id, name, xpath, css.....
-        :param locator: eg: id, name, xpath for str
-        :return: if element return True else return false
+       判断元素存在
         """
         if by.lower() in self.byDic:
             try:
@@ -96,8 +87,7 @@ class BasePage(object):
 
     def is_alert(self):
         """
-        assert alert if exsit
-        :return: alert obj
+        判断alert弹框存在
         """
         try:
             re = WD(self.driver, self.outTime).until(ec.alert_is_present())
@@ -137,7 +127,6 @@ class BasePage(object):
     def get_element_text(self, by,name, locator=None):
 
         """获取某一个元素的text信息"""
-        print("**locator:{},by:{},name:{}".format(locator,by,name))
         try:
          
             element= WebDriverWait(self.driver, 30).until(
@@ -161,9 +150,12 @@ class BasePage(object):
         """获取页面源码"""
         return self.driver.page_source
 
+    def get_currenturl(self):
+        """获取当前页的url"""
+        return self.driver.current_url
+
     def send_keys(self, value, by,locator=''):
         """写数据"""
-        print("locator:{},by:{}".format(locator,by))
         print('info:input "{}"'.format(value))
         try:
             # element = self.find_element(by, locator)
@@ -177,9 +169,6 @@ class BasePage(object):
     def clear(self, by, locator):
         """清理数据"""
         print('info:clearing value')
-        print('by:{}locator:{}'.format(by,locator))
-
-
         try:
             element = self.find_element(by, locator)
             element.clear()

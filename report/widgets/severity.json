@@ -1,0 +1,41 @@
+[ {
+  "uid" : "98b3d7c8a15dc22d",
+  "name" : "test_login[10086-10086-登录成功]",
+  "time" : {
+    "start" : 1584410014534,
+    "stop" : 1584410014534,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "e038e18b722e5a1c",
+  "name" : "test_fail[-10086-请输入账号]",
+  "time" : {
+    "start" : 1584410020710,
+    "stop" : 1584410024492,
+    "duration" : 3782
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a719c544ca2a952b",
+  "name" : "test_fail[10086--请输入密码]",
+  "time" : {
+    "start" : 1584410015918,
+    "stop" : 1584410020700,
+    "duration" : 4782
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2e7f5c98133839cb",
+  "name" : "test_fail[10010-10010-图形验证码校验失败]",
+  "time" : {
+    "start" : 1584410024501,
+    "stop" : 1584410028231,
+    "duration" : 3730
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,169 @@
+{
+  "uid" : "2e7f5c98133839cb",
+  "name" : "test_fail[10010-10010-图形验证码校验失败]",
+  "fullName" : "TestCases.test_loginCase.TestLogin#test_fail",
+  "historyId" : "838b6aa72a254932c0636aa50287d518",
+  "time" : {
+    "start" : 1584410024501,
+    "stop" : 1584410028231,
+    "duration" : 3730
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "open_url",
+    "time" : {
+      "start" : 1584410024500,
+      "stop" : 1584410024500,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "ini_pages",
+    "time" : {
+      "start" : 1584410015917,
+      "stop" : 1584410015917,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1584410014538,
+      "stop" : 1584410015916,
+      "duration" : 1378
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "open_url::0",
+    "time" : {
+      "start" : 1584410028233,
+      "stop" : 1584410028236,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "ini_pages::0",
+    "time" : {
+      "start" : 1584410028236,
+      "stop" : 1584410028236,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1584410028237,
+      "stop" : 1584410028303,
+      "duration" : 66
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "login功能"
+  }, {
+    "name" : "story",
+    "value" : "login"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_loginCase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "Lettos-iMac.local"
+  }, {
+    "name" : "thread",
+    "value" : "15177-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_loginCase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expect",
+    "value" : "'图形验证码校验失败'"
+  }, {
+    "name" : "password",
+    "value" : "'10010'"
+  }, {
+    "name" : "username",
+    "value" : "'10010'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e8230f3685f882f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584409625204,
+        "stop" : 1584409628813,
+        "duration" : 3609
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2e7f5c98133839cb.json",
+  "parameterValues" : [ "'图形验证码校验失败'", "'10010'", "'10010'" ]
+}

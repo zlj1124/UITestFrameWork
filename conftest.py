@@ -1,3 +1,8 @@
+'''
+@Descripttion: 
+@Author: zlj
+@Date: 2019-12-05 11:05:13
+'''
 
 import pytest
 import os
@@ -34,6 +39,7 @@ def pytest_runtest_makereport(item):
         report.nodeid = report.nodeid.encode("utf-8").decode("unicode_escape")
 
 
+#增加测试报错中的Description
 @pytest.mark.optionalhook
 def pytest_html_results_table_header(cells):
     cells.insert(1, html.th('Description'))
@@ -41,8 +47,6 @@ def pytest_html_results_table_header(cells):
     cells.pop(2)
     cells.pop()
     
-
-
 @pytest.mark.optionalhook
 def pytest_html_results_table_row(report, cells):
     cells.insert(1, html.td(report.description))
@@ -72,6 +76,7 @@ def driver():
     _driver = webdriver.Chrome(executable_path=driverpath,options=option)
 #     _driver = webdriver.Chrome(executable_path=driverpath)
     _driver.maximize_window()
+
     yield _driver
     print('------------close browser------------')
     _driver.quit()

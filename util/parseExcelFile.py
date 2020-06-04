@@ -1,3 +1,8 @@
+'''
+@Descripttion: 
+@Author: zlj
+@Date: 2019-12-05 11:05:13
+'''
 
 from openpyxl import load_workbook
 from config.conf import DATA_Path
@@ -71,7 +76,7 @@ if __name__ == '__main__':
     exe=ParseExcel()
     sheet=exe.get_sheet_by_name('login')
     print(exe.get_all_values_of_sheet(sheet))
-    print(exe.get_all_values_of_sheet(sheet)[0])
+    
     
 
 
