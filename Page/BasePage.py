@@ -1,11 +1,9 @@
 
 import time
 from selenium.webdriver.support.wait import WebDriverWait as WD
-from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
-
-from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import (
     TimeoutException,
@@ -60,12 +58,12 @@ class BasePage(object):
 
     def is_element_exist(self, by, locator):
         """
-       判断元素存在
+       判断元素可见
         """
         if by.lower() in self.byDic:
             try:
                 WD(self.driver, self.outTime). \
-                    until(ec.visibility_of_element_located((self.byDic[by], locator)))
+                    until(EC.visibility_of_element_located((self.byDic[by], locator)))
             except TimeoutException:
                 print('Error: element "{}" not exist'.format(locator))
                 return False
@@ -74,10 +72,11 @@ class BasePage(object):
             print('the "{}" error!'.format(by))
 
     def is_click(self, by, locator):
+        """元素可点击"""
         if by.lower() in self.byDic:
             try:
                 element = WD(self.driver, self.outTime). \
-                    until(ec.element_to_be_clickable((self.byDic[by], locator)))
+                    until(EC.element_to_be_clickable((self.byDic[by], locator)))
             except TimeoutException:
                 print("元素不可以点击")
             else:
@@ -90,7 +89,7 @@ class BasePage(object):
         判断alert弹框存在
         """
         try:
-            re = WD(self.driver, self.outTime).until(ec.alert_is_present())
+            re = WD(self.driver, self.outTime).until(EC.alert_is_present())
         except (TimeoutException, NoAlertPresentException):
             print("error:no found alert")
         else:
@@ -102,7 +101,7 @@ class BasePage(object):
         if by.lower() in self.byDic:
             try:
                 WD(self.driver, self.outTime). \
-                    until(ec.frame_to_be_available_and_switch_to_it((self.byDic[by], locator)))
+                    until(EC.frame_to_be_available_and_switch_to_it((self.byDic[by], locator)))
             except TimeoutException as t:
                 print('error: found "{}" timeout！切换frame失败'.format(locator), t)
         else:
@@ -124,20 +123,21 @@ class BasePage(object):
         else:
             return None
 
-    def get_element_text(self, by,name, locator=None):
+    def get_element_text(self, by,locator=None):
 
         """获取某一个元素的text信息"""
+
         try:
          
-            element= WebDriverWait(self.driver, 30).until(
-            EC.presence_of_element_located((by,name)))
-            print("==element:{},element.text:{}".format(element,element.text))
+            element = WD(self.driver, 30).until(
+            EC.visibility_of_element_located((self.byDic[by], locator)))
 
-            print (element.text)
-            if locator:
-                return element.get_attribute(name)
-            else:
-                return element.text
+            # element = WD(self.driver,30).until(
+            #     EC.presence_of_element_located((self.byDic[by], locator))
+            # )                                  
+            print("element.text:{}".format(element.text))
+
+            return element.text
         except AttributeError:
             print('get "{}" text failed return None'.format(locator))
 
@@ -158,8 +158,7 @@ class BasePage(object):
         """写数据"""
         print('info:input "{}"'.format(value))
         try:
-            # element = self.find_element(by, locator)
-            element= WebDriverWait(self.driver, 30).until(
+            element= WD(self.driver, 30).until(
             EC.presence_of_element_located((by, locator)))
             element.send_keys(value)
             time.sleep(1)
@@ -217,10 +216,10 @@ class BasePage(object):
     #     KeyBoard.one_key('enter')
 
     def wait_element_to_be_located(self, by, locator):
-        """显示等待某个元素出现，且可见"""
+        """显示等待某个元素出现"""
         print('info:waiting "{}" to be located'.format(locator))
         try:
-            return WD(self.driver, self.outTime).until(ec.presence_of_element_located((self.byDic[by], locator)))
+            return WD(self.driver, self.outTime).until(EC.presence_of_element_located((self.byDic[by], locator)))
         except TimeoutException as t:
             print('error: found "{}" timeout！'.format(locator), t)
 

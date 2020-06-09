@@ -19,7 +19,7 @@
         5.生成allure报告
             1. py.test TestCases/test_loginCase.py  --alluredir ./result/
             2.allure generate ./result/ -o ./report/ --clean 
-            
+      
       
 
     

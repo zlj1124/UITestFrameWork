@@ -1,3 +1,8 @@
+'''
+@Descripttion: 
+@Author: zlj
+@Date: 2019-12-05 11:05:13
+'''
 from Page.BasePage import BasePage
 from util.parseConFile import ParseConFile
 
@@ -30,7 +35,7 @@ class HomePage(BasePage):
             self.click_home_page_menu()
         elif menu == 'alarm':
             self.click_alarm_menu()
-        elif menu == 'vehicle':
+        elif menu == 'truck':
             self.click_vehicle_menu()
         elif menu == 'statistics':
             self.click_statistics_menu()
@@ -44,7 +49,7 @@ class HomePage(BasePage):
                 homePage->首页
                 monitor->监控
                 alarm->报警
-                vehicle->车辆
+                truck->车辆
                 statistics->统计
                 setting->设置'''
             )

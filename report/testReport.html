@@ -235,7 +235,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>testReport.html</h1>
-    <p>Report generated on 04-Jun-2020 at 10:43:06 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.21.1</p>
+    <p>Report generated on 09-Jun-2020 at 14:05:10 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.21.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -251,8 +251,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.6.5</td></tr></table>
     <h2>Summary</h2>
-    <p>0 tests ran in 1.35 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">1 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
+    <p>8 tests ran in 69.08 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">1 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -262,4 +262,85 @@ function filter_table(elem) {
           <th class="sortable" col="name">Test</th>
           <th class="sortable numeric" col="duration">Duration</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="skipped results-table-row">
+        <tr>
+          <td class="col-result">Skipped</td>
+          <td>None</td>
+          <td class="col-name">TestCases/test_loginCase.py::TestLogin::test_login[10086-10086-登录成功]::setup</td>
+          <td class="col-duration">0.00</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">(&#x27;TestCases/test_loginCase.py&#x27;, 17, &#x27;Skipped: unconditional skip&#x27;)<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>验证添加业务员</td>
+          <td class="col-name">TestCases/test_ProfileCase.py::TestAddworker::test_a_add_success[linux-13691579841-市场营销-添加成功]</td>
+          <td class="col-duration">10.91</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>验证添加业务员唯一</td>
+          <td class="col-name">TestCases/test_ProfileCase.py::TestAddworker::test_b_add_fail[linux2-13691579841-行政管理-电话: 该手机号已经存在，不能创建]</td>
+          <td class="col-duration">3.95</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>验证修改业务员</td>
+          <td class="col-name">TestCases/test_ProfileCase.py::TestAddworker::test_c_alter_success[linux1-13691579842-行政管理-修改成功]</td>
+          <td class="col-duration">5.30</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>验证删除业务员</td>
+          <td class="col-name">TestCases/test_ProfileCase.py::TestAddworker::test_d_delete_success[删除成功]</td>
+          <td class="col-duration">2.45</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>None</td>
+          <td class="col-name">TestCases/test_loginCase.py::TestLogin::test_fail[10086--请输入密码]</td>
+          <td class="col-duration">5.29</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>None</td>
+          <td class="col-name">TestCases/test_loginCase.py::TestLogin::test_fail[-10086-请输入账号]</td>
+          <td class="col-duration">4.76</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>None</td>
+          <td class="col-name">TestCases/test_loginCase.py::TestLogin::test_fail[linux-10087-用户名或者密码有误]</td>
+          <td class="col-duration">4.73</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td>验证上传文件</td>
+          <td class="col-name">TestCases/test_uploadfile.py::Testupload_file::test_a_uploadfile</td>
+          <td class="col-duration">10.87</td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>

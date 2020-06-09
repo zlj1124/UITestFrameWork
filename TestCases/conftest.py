@@ -8,6 +8,7 @@ import pytest
 from Page.PageObject.LoginPage import LoginPage
 from Page.PageObject.HomePage import HomePage
 from Page.PageObject.ProfilePage import ProfilePage
+from Page.PageObject.TruckPage import TruckPage
 from util.parseConFile import ParseConFile
 
 
@@ -31,9 +32,11 @@ passWord = do_conf.get_locators_or_account('LoginAccount', 'password')
 def ini_pages(driver):
     login_page = LoginPage(driver)
     home_page = HomePage(driver)
+    truck_page = TruckPage(driver) 
     profile_page = ProfilePage(driver)
+
     # yield生成器实例化pageobject
-    yield driver, login_page, home_page, profile_page
+    yield driver, login_page, home_page, truck_page, profile_page
 
 
 @pytest.fixture(scope='function')
@@ -46,9 +49,9 @@ def open_url(ini_pages):
 
 @pytest.fixture(scope='class')
 def login(ini_pages):
-    driver, login_page, home_page,profile_page = ini_pages
+    driver, login_page, home_page, truck_page, profile_page = ini_pages
     login_page.login(userName, passWord)
-    yield login_page, home_page, profile_page 
+    yield login_page, home_page, truck_page,profile_page 
     driver.delete_all_cookies()
 
 

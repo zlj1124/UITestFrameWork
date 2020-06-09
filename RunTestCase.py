@@ -16,11 +16,11 @@ def main():
     args = ['--reruns', '0', '--html=' + './report/' + HTML_NAME]
     pytest.main(args)
    
-    # # 发送邮件 
-    # HTML=ROOT_DIR+'/report/testReport.html'
-    # SendMailWithReport.send_mail(
-    #     SMTP_SERVER, FROM_USER, FROM_PASSWORD,
-    #     TO_USER, SUBJECT, CONTENTS,HTML)
+    # 发送邮件 
+    HTML=ROOT_DIR+'/report/testReport.html'
+    SendMailWithReport.send_mail(
+        SMTP_SERVER, FROM_USER, FROM_PASSWORD,
+        TO_USER, SUBJECT, CONTENTS,HTML)
 
 
 if __name__ == '__main__':
